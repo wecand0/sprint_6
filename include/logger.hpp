@@ -12,7 +12,7 @@ public:
         return instance;
     }
 
-    void Log(const std::string &message) { fprintf(file_, "%s\n", message.c_str()); }
+    void Log(const std::string &message) const { fprintf(file_, "%s\n", message.c_str()); }
 
     Logger(const Logger &) = delete;
     Logger &operator=(const Logger &) = delete;
