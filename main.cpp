@@ -1,6 +1,4 @@
 #include <chrono>
-#include <climits>
-#include <iostream>
 #include <print>
 #include <thread>
 
@@ -10,7 +8,7 @@
 using namespace dispatcher;
 
 int main() {
-    TaskDispatcher td(std::thread::hardware_concurrency());
+    const TaskDispatcher td(std::thread::hardware_concurrency());
     std::vector<std::jthread> threads;
 
     for (int i = 0; i < 5; ++i) {
